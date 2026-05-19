@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "PWA Accessibilità Domotica"
+    }
+  ],
+  "settings": {
+    "npm.enableRunFromFolder": true
+  },
+  "extensions": {}
+}
