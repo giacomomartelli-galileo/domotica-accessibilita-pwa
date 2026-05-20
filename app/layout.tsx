@@ -17,12 +17,15 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only">
           Salta al contenuto
         </a>
-        <header className="border-b border-border bg-card">
-          <div className="container flex h-14 items-center gap-6">
-            <span className="font-semibold">Accessibilità Domotica</span>
-            <nav>
-              <Link href="/preview" className="text-primary underline">
-                Anteprima prototipo
+        <header className="sticky top-0 z-50 w-full border-b border-slate-200/50 bg-background/80 backdrop-blur-md text-foreground">
+          <div className="container flex h-14 items-center justify-between">
+            <span className="font-semibold tracking-tight">Accessibilità Domotica</span>
+            <nav className="flex items-center gap-4">
+              <Link href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                Home
+              </Link>
+              <Link href="/preview" className="text-sm font-medium text-primary hover:underline transition-colors">
+                Anteprima
               </Link>
             </nav>
           </div>

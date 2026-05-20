@@ -83,7 +83,7 @@ export function AnalysisResults({ analysis, roomType }: AnalysisResultsProps) {
             <Home className="h-6 w-6 text-primary" aria-hidden />
             Report: {ROOM_TYPE_LABELS[roomType]}
           </CardTitle>
-          <CardDescription className="text-base leading-relaxed text-foreground">
+          <CardDescription className="text-base leading-relaxed text-card-foreground/90">
             {summary}
           </CardDescription>
         </CardHeader>
@@ -106,10 +106,10 @@ export function AnalysisResults({ analysis, roomType }: AnalysisResultsProps) {
           <Card>
             <CardContent className="flex items-start gap-3 pt-6">
               <CheckCircle2
-                className="mt-0.5 h-6 w-6 shrink-0 text-green-600 dark:text-green-400"
+                className="mt-0.5 h-6 w-6 shrink-0 text-emerald-400"
                 aria-hidden
               />
-              <p className="text-base text-foreground">
+              <p className="text-base text-card-foreground/90">
                 Nessun ostacolo significativo rilevato in questa foto. Puoi
                 scattare un&apos;altra inquadratura per una verifica più
                 completa.
@@ -138,7 +138,7 @@ export function AnalysisResults({ analysis, roomType }: AnalysisResultsProps) {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-base leading-relaxed text-foreground">
+                    <p className="text-base leading-relaxed text-card-foreground/90">
                       {issue.description}
                     </p>
                   </CardContent>
@@ -166,27 +166,27 @@ export function AnalysisResults({ analysis, roomType }: AnalysisResultsProps) {
           <ul className="space-y-4" role="list">
             {allSuggestions.map((suggestion, index) => (
               <li key={`${suggestion.product_name}-${index}`}>
-                <Card className="bg-muted/30">
+                <Card className="bg-secondary/40 border-border/40">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-base">
+                    <CardTitle className="text-base font-semibold">
                       {suggestion.product_name}
                     </CardTitle>
                     <CardDescription>
-                      <Badge variant="secondary" className="font-normal">
+                      <Badge variant="secondary" className="font-normal bg-primary/20 text-primary-foreground border-transparent">
                         {suggestion.category}
                       </Badge>
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <p className="text-sm text-muted-foreground">
-                      <span className="font-medium text-foreground">
+                      <span className="font-medium text-card-foreground">
                         Riferito a:{" "}
                       </span>
                       {ISSUE_TYPE_LABELS[suggestion.issueType]}
                     </p>
                     {suggestion.installation_notes && (
-                      <p className="text-base leading-relaxed text-foreground">
-                        <span className="font-medium">Note installazione: </span>
+                      <p className="text-base leading-relaxed text-card-foreground/90">
+                        <span className="font-medium text-card-foreground">Note installazione: </span>
                         {suggestion.installation_notes}
                       </p>
                     )}

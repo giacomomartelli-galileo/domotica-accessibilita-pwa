@@ -229,7 +229,7 @@ export function RoomAnalyzer({
                 Scegli foto
               </Button>
               {selectedFile && (
-                <span className="text-sm text-foreground">
+                <span className="text-sm text-card-foreground/90 font-medium">
                   {selectedFile.name}
                 </span>
               )}
@@ -240,7 +240,7 @@ export function RoomAnalyzer({
           </div>
 
           {previewUrl && (
-            <figure className="overflow-hidden rounded-lg border border-border">
+            <figure className="overflow-hidden rounded-xl border border-border">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={previewUrl}
@@ -254,14 +254,14 @@ export function RoomAnalyzer({
             <div
               role="status"
               aria-busy="true"
-              className="space-y-3 rounded-lg border border-border bg-muted/40 p-4"
+              className="space-y-3 rounded-xl border border-border bg-muted/20 p-4 animate-pulse"
             >
               <div className="flex items-center gap-3">
                 <Loader2
                   className="h-6 w-6 animate-spin text-primary"
                   aria-hidden
                 />
-                <p className="font-medium text-foreground">
+                <p className="font-medium text-card-foreground">
                   {phase === "uploading"
                     ? "Caricamento foto in corso…"
                     : "Analisi accessibilità in corso…"}
